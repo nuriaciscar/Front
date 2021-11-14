@@ -4,10 +4,12 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import RegisterForm from "../../components/RegisterForm/RegisterForm";
+import useUser from "../../hooks/useUser";
+const { isAuthenticated } = useUser;
 
 const LoginPage = () => {
   const user = useSelector((store) => store.user);
-  const [clicked, setIsClicked] = useState(false);
+  const [registered, setIsRegistered] = useState(false);
 
   let navigate = useNavigate();
 
@@ -15,24 +17,25 @@ const LoginPage = () => {
     user.isAuthenticated ? navigate("/users/") : navigate("/login");
   }, [navigate, user]);
 
-  const openRegistration = () => {
-    setIsClicked(!clicked);
+  const enter = () => {
+    setIsRegistered(!registered);
   };
+
   return (
     <div>
-      {!clicked ? (
+      {!registered ? (
         <>
-          <Link to="/login/login">
-            <button onClick={openRegistration}>Register</button>
+          <Link to="/login/register">
+            <button onClick={enter}>Register</button>
           </Link>
-          <RegisterForm />
+          <LoginForm />
         </>
       ) : (
         <>
-          <Link to="/login/register">
+          <Link to="/login">
             <button>Back to Login</button>
           </Link>
-          <LoginForm />
+          <RegisterForm />
         </>
       )}
     </div>

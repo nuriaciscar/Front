@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
-import useUser from "../../hooks/useUser";
-
 const RegisterForm = () => {
   const initialUserData = {
     username: "",
@@ -15,11 +13,8 @@ const RegisterForm = () => {
   const [loginUserData, setUserData] = useState(initialUserData);
   const [isDisabled, setIsDisabled] = useState(true);
 
-  //   const { loginUser } = useUser();
-
   const onSubmit = (event) => {
     event.preventDefault();
-    // loginUser(loginUserData);
   };
 
   const changeDataUser = (event) => {
