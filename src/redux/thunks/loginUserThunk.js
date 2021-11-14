@@ -8,7 +8,7 @@ export const loginUserThunk = (user) => {
   return async (dispatch) => {
     const { data: token } = await axios.post(urlApi + "/login/login", user);
     localStorage.setItem(process.env.REACT_APP_LOCALSTORAGE_KEY, token.token);
-    const userData = jwtDecode(token);
-    dispatch(loginUserAction(userData));
+    const userInfo = jwtDecode(token);
+    dispatch(loginUserAction(userInfo));
   };
 };
