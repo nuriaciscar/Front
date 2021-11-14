@@ -1,4 +1,4 @@
-import actionTypes from "../actions/userActionTypes";
+import actionTypes from "../actions/usersActionTypes";
 
 const usersReducer = (users = [], action) => {
   let newUsers;

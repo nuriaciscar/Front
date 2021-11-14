@@ -1,4 +1,4 @@
-import actionTypes from "./actionTypes";
+import actionTypes from "./userActionTypes";
 
 export const loadUsersAction = (users) => ({
   type: actionTypes.loadUsers,
