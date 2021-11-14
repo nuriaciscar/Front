@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import RegisterForm from "../../components/RegisterForm/RegisterForm";
 import useUser from "../../hooks/useUser";
+
 const { isAuthenticated } = useUser;
 
 const LoginPage = () => {
@@ -26,14 +27,21 @@ const LoginPage = () => {
       {!registered ? (
         <>
           <Link to="/login/register">
-            <button onClick={enter}>Register</button>
+            <button
+              className="register-button btn btn-lg btn-primary btn-block"
+              onClick={enter}
+            >
+              Register
+            </button>
           </Link>
           <LoginForm />
         </>
       ) : (
         <>
           <Link to="/login">
-            <button>Back to Login</button>
+            <button className="register-login btn btn-lg btn-primary btn-block">
+              Back to Login
+            </button>
           </Link>
           <RegisterForm />
         </>

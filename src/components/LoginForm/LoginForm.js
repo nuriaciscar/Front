@@ -31,49 +31,54 @@ const LoginForm = () => {
   }, [loginUserData]);
 
   return (
-    <form
-      noValidate
-      autoComplete="off"
-      onSubmit={onSubmit}
-      className="loginform"
-    >
-      <h2 className="loginform_title">Login</h2>
-      <label htmlFor="username" className="loginform_label">
-        Username
-      </label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        placeholder="Username"
-        required
-        onChange={changeUserData}
-        className="loginform_input"
-        value={loginUserData.username}
-      ></input>
-      <label htmlFor="password" className="loginform_label">
-        Password
-      </label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="Password"
-        required
-        onChange={changeUserData}
-        className="loginform_input"
-        value={loginUserData.password}
-      ></input>
-      <button
-        type="submit"
-        className={
-          isDisabled ? "loginform_submit_disabled" : "loginform_submit_active"
-        }
-        disabled={isDisabled}
-      >
-        Login
-      </button>
-    </form>
+    <div id="fullBg">
+      <div className="container">
+        <form
+          noValidate
+          autoComplete="off"
+          onSubmit={onSubmit}
+          className="form-signin"
+        >
+          <h2 className="form-signin-heading">Login</h2>
+
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            required
+            onChange={changeUserData}
+            className="loginform_input"
+            value={loginUserData.username}
+          ></input>
+
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+            onChange={changeUserData}
+            className="loginform_input"
+            value={loginUserData.password}
+          ></input>
+          <button
+            type="submit"
+            className={
+              isDisabled
+                ? "btn btn-lg btn-primary btn-block"
+                : "btn btn-lg btn-primary btn-block"
+            }
+            disabled={isDisabled}
+          >
+            Login
+          </button>
+        </form>
+        <p className="text-center sign-up">
+          <strong>Or</strong>
+        </p>
+      </div>
+    </div>
   );
 };
 

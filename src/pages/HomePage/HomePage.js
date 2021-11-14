@@ -1,7 +1,7 @@
 import jwtDecode from "jwt-decode";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import cardUser from "../../components/cardUser/cardUser";
+import { useDispatch } from "react-redux";
+
 import useUsers from "../../hooks/useUsers";
 
 const HomePage = () => {

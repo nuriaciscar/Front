@@ -9,7 +9,7 @@ const usersReducer = (users = [], action) => {
       break;
 
     default:
-      newUsers = users;
+      newUsers = [...users];
       break;
   }
 
