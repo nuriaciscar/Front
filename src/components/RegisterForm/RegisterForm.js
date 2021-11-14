@@ -35,100 +35,90 @@ const RegisterForm = () => {
   }, [loginUserData]);
 
   return (
-    <form
-      noValidate
-      autoComplete="off"
-      onSubmit={onSubmit}
-      className="loginform"
-    >
-      <h2 className="loginform_title">Sign up</h2>
-      <label htmlFor="name" className="loginform_label">
-        Name
-      </label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Name"
-        required
-        onChange={changeDataUser}
-        className="loginform_input"
-        value={loginUserData.name}
-      ></input>
-      <label htmlFor="username" className="loginform_label">
-        Username
-      </label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        placeholder="Username"
-        required
-        onChange={changeDataUser}
-        className="loginform_input"
-        value={loginUserData.username}
-      ></input>
-      <label htmlFor="password" className="loginform_label">
-        Password
-      </label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="Password"
-        required
-        onChange={changeDataUser}
-        className="loginform_input"
-        value={loginUserData.password}
-      ></input>
-      <label htmlFor="age" className="loginform_label">
-        Age
-      </label>
-      <input
-        type="number"
-        id="age"
-        name="age"
-        min="16"
-        max="130"
-        placeholder="Age"
-        required
-        onChange={changeDataUser}
-        className="loginform_input"
-        value={loginUserData.username}
-      ></input>
-      <label htmlFor="bio" className="loginform_label">
-        Bio
-      </label>
-      <textarea
-        type=""
-        id="bio"
-        name="bio"
-        placeholder="Bio"
-        required
-        onChange={changeDataUser}
-        className="loginform_input"
-        value={loginUserData.username}
-      ></textarea>
-      <label htmlFor="image" className="loginform_label">
-        Bio
-      </label>
-      <textarea
-        type="file"
-        id="image"
-        onChange={changeDataUser}
-        className="loginform_input"
-        value={loginUserData.username}
-      ></textarea>
-      <button
-        type="submit"
-        className={
-          isDisabled ? "loginform_submit_disabled" : "loginform_submit_active"
-        }
-        disabled={isDisabled}
-      >
-        Register
-      </button>
-    </form>
+    <div id="fullBg">
+      <div className="container">
+        <form
+          noValidate
+          autoComplete="off"
+          onSubmit={onSubmit}
+          className="form-signin"
+        >
+          <h2 className="form-signin-heading">Sign up</h2>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+            onChange={changeDataUser}
+            className="loginform_input"
+            value={loginUserData.name}
+          ></input>
+
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            required
+            onChange={changeDataUser}
+            className="loginform_input"
+            value={loginUserData.username}
+          ></input>
+
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+            onChange={changeDataUser}
+            className="loginform_input"
+            value={loginUserData.password}
+          ></input>
+
+          <input
+            type="text"
+            id="age"
+            name="age"
+            min="16"
+            max="130"
+            placeholder="Age"
+            required
+            onChange={changeDataUser}
+            className="loginform_input"
+            value={loginUserData.username}
+          ></input>
+
+          <textarea
+            type=""
+            id="bio"
+            name="bio"
+            placeholder="Bio"
+            required
+            onChange={changeDataUser}
+            className="loginform_input"
+            value={loginUserData.username}
+          ></textarea>
+
+          <label class="form-label" for="customFile">
+            Default file input example
+          </label>
+          <input type="file" class="form-control" id="customFile" />
+          <button
+            type="submit"
+            className="btn btn-lg btn-primary btn-block"
+            disabled={isDisabled}
+          >
+            Register
+          </button>
+          <p className="text-center sign-up">
+            <strong>Or</strong>
+          </p>
+        </form>
+      </div>
+    </div>
   );
 };
 
