@@ -1,5 +1,5 @@
-import { loginUserAction } from "./actionCreators";
-import actionTypes from "./actionTypes";
+import { loginUserAction } from "./userActionCreators";
+import actionTypes from "./userActionTypes";
 
 describe("Given a loginUser actionCreator", () => {
   describe("When it receives a user", () => {
