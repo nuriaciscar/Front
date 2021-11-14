@@ -18,6 +18,7 @@ const userReducer = (
     default:
       newUser = currentUser;
   }
+  return newUser;
 };
 
 export default userReducer;
