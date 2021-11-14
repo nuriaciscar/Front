@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
 
 import useUser from "../../hooks/useUser";
 
@@ -13,13 +12,6 @@ const LoginForm = () => {
   const [isDisabled, setIsDisabled] = useState(true);
   const { loginUser } = useUser();
 
-  //   let navigate = useNavigate();
-
-  //   useEffect(() =>{
-  //       if(user.isAuthenthicated){
-  //           navigate("/users/")
-  //       }
-  //   }, [navigate, user.isAuthenticated])
   const onSubmit = (event) => {
     event.preventDefault();
     loginUser(loginUserData);
