@@ -14,7 +14,7 @@ const LoginPage = () => {
   let navigate = useNavigate();
 
   useEffect(() => {
-    user.isAuthenticated ? navigate("/users/") : navigate("/login");
+    user.isAuthenticated ? navigate("/users") : navigate("/login");
   }, [navigate, user]);
 
   const enter = () => {

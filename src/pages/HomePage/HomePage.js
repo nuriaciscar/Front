@@ -1,6 +1,28 @@
+import jwtDecode from "jwt-decode";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import cardUser from "../../components/cardUser/cardUser";
+import useUsers from "../../hooks/useUsers";
 
 const HomePage = () => {
+  const { users, loadUsers } = useUsers();
+  const dispatch = useDispatch();
+
+  const [getUser, setGetUser] = useState();
+
+  useEffect(() => {
+    loadUsers();
+  }, [dispatch, loadUsers]);
+
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      const token = localStorage.getItem("user");
+      const user = jwtDecode(token);
+      setGetUser(user.name);
+      loadUsers(token);
+    }
+  }, [loadUsers]);
+
   return (
     <main className="main">
       <section>

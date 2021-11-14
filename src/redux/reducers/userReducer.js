@@ -1,4 +1,4 @@
-import actionTypes from "../actions/actionTypes";
+import actionTypes from "../actions/userActionTypes";
 
 const userReducer = (
   currentUser = { isAuthenticated: false, user: {} },
