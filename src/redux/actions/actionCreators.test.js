@@ -14,9 +14,9 @@ describe("Given a loginUser actionCreator", () => {
         user,
       };
 
-      const expectedResult = loginUserAction(user);
+      const result = loginUserAction(user);
 
-      expect(expectedResult).toEqual(action);
+      expect(result).toEqual(action);
     });
   });
 });
