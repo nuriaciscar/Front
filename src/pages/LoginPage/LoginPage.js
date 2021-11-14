@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
@@ -15,11 +15,11 @@ const LoginPage = () => {
   return (
     <>
       <div>
-        <Link to="/login">
+        <Link to="/login/login">
           <button>Login</button>
         </Link>
 
-        <Link to="/register">
+        <Link to="/login/register">
           <button>Sign Up</button>
         </Link>
       </div>
