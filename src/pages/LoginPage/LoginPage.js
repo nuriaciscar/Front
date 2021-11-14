@@ -4,9 +4,9 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import RegisterForm from "../../components/RegisterForm/RegisterForm";
-import useUser from "../../hooks/useUser";
+// import useUser from "../../hooks/useUser";
 
-const { isAuthenticated } = useUser;
+// const { isAuthenticated } = useUser;
 
 const LoginPage = () => {
   const user = useSelector((store) => store.user);
