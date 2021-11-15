@@ -16,7 +16,7 @@ const userReducer = (
       break;
 
     default:
-      newUser = currentUser;
+      newUser = { ...currentUser };
   }
   return newUser;
 };

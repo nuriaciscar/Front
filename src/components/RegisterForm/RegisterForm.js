@@ -1,20 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import useUsers from "../../hooks/useUsers";
 
 const RegisterForm = () => {
-  const initialUserData = {
-    username: "",
-    password: "",
-    name: "",
-    age: "",
-    bio: "",
-    image: "",
-  };
+  const initialUserData = useMemo(
+    () => ({
+      username: "",
+      password: "",
+      name: "",
+      age: "",
+      bio: "",
+      image: "",
+    }),
+    []
+  );
 
   const [loginUserData, setUserData] = useState(initialUserData);
   const [isDisabled, setIsDisabled] = useState(true);
+  const { registerUser } = useUsers();
 
   const onSubmit = (event) => {
     event.preventDefault();
+    registerUser(loginUserData);
   };
 
   const changeDataUser = (event) => {
@@ -102,9 +108,6 @@ const RegisterForm = () => {
             value={loginUserData.bio}
           ></textarea>
 
-          <label className="form-label" htmlFor="customFile">
-            Default file input example
-          </label>
           <input
             value={loginUserData.image}
             type="file"
