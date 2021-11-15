@@ -6,7 +6,7 @@ import useUsers from "../../hooks/useUsers";
 
 const HomePage = () => {
   const { users, loadUsers } = useUsers();
-  console.log("pepe", users);
+
   useEffect(() => {
     loadUsers();
   }, [loadUsers]);
