@@ -102,9 +102,6 @@ const RegisterForm = () => {
             value={loginUserData.bio}
           ></textarea>
 
-          <label className="form-label" htmlFor="customFile">
-            Default file input example
-          </label>
           <input
             value={loginUserData.image}
             type="file"

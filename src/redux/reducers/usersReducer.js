@@ -8,6 +8,10 @@ const usersReducer = (users = [], action) => {
       newUsers = [...action.users];
       break;
 
+    case actionTypes.registerUser:
+      newUsers = [...users, action.user];
+      break;
+
     default:
       newUsers = [...users];
       break;

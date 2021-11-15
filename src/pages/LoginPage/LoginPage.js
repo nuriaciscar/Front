@@ -4,9 +4,6 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import RegisterForm from "../../components/RegisterForm/RegisterForm";
-// import useUser from "../../hooks/useUser";
-
-// const { isAuthenticated } = useUser;
 
 const LoginPage = () => {
   const user = useSelector((store) => store.user);
@@ -30,6 +27,7 @@ const LoginPage = () => {
             <button
               className="register-button btn btn-lg btn-primary btn-block"
               onClick={enter}
+              type="submit"
             >
               Register
             </button>
@@ -38,12 +36,16 @@ const LoginPage = () => {
         </>
       ) : (
         <>
+          <RegisterForm />
           <Link to="/login">
-            <button className="register-login btn btn-lg btn-primary btn-block">
+            <button
+              className="register-login btn btn-lg btn-primary btn-block"
+              type="button"
+              onClick={enter}
+            >
               Back to Login
             </button>
           </Link>
-          <RegisterForm />
         </>
       )}
     </div>
