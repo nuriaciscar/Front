@@ -1,12 +1,12 @@
 // import jwtDecode from "jwt-decode";
 import { useEffect } from "react";
-import CardUser from "../../components/cardUser/CardUser";
 
+import CardUser from "../../components/cardUser/CardUser";
 import useUsers from "../../hooks/useUsers";
 
 const HomePage = () => {
   const { users, loadUsers } = useUsers();
-  console.log("pepe", users);
+
   useEffect(() => {
     loadUsers();
   }, [loadUsers]);

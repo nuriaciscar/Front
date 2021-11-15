@@ -15,7 +15,7 @@ export const loadUsersThunk = async (dispatch) => {
       },
     }
   );
-  console.log(users);
+
   dispatch(loadUsersAction(users));
 };
 
@@ -27,8 +27,6 @@ export const registerUserThunk = (user) => async (dispatch) => {
   registeredUser.append("image", user.image);
   registeredUser.append("age", user.age);
   registeredUser.append("bio", user.bio);
-
-  console.log(registeredUser);
 
   const { data: newUser } = await axios.post(
     process.env.REACT_APP_API_URL + "/login/register",
