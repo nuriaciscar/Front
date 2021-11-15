@@ -14,8 +14,8 @@ const HomePage = () => {
   return (
     <main className="main">
       <section>
-        <div class="container">
-          <div class="row">
+        <div className="container">
+          <div className="row">
             <h1>My Friends </h1>
             {users.map((user) => (
               <CardUser user={user} key={user.id} />

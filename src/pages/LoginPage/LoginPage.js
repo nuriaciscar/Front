@@ -26,8 +26,8 @@ const LoginPage = () => {
           <Link to="/login/register">
             <button
               className="register-button btn btn-lg btn-primary btn-block"
+              type="button"
               onClick={enter}
-              type="submit"
             >
               Register
             </button>
