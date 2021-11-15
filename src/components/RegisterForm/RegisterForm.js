@@ -101,7 +101,7 @@ const RegisterForm = () => {
             type=""
             id="bio"
             name="bio"
-            placeholder="Bio"
+            placeholder="Biography"
             required
             onChange={changeDataUser}
             className="loginform_input"
