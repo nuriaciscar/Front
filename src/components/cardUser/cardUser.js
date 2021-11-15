@@ -1,4 +1,4 @@
-const cardUser = ({ user }) => {
+const CardUser = ({ user }) => {
   return (
     <li className="card">
       <div className="card_image">
@@ -13,4 +13,4 @@ const cardUser = ({ user }) => {
   );
 };
 
-export default cardUser;
+export default CardUser;
