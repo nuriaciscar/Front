@@ -88,7 +88,7 @@ const RegisterForm = () => {
             required
             onChange={changeDataUser}
             className="loginform_input"
-            value={loginUserData.username}
+            value={loginUserData.age}
           ></input>
 
           <textarea
@@ -99,13 +99,19 @@ const RegisterForm = () => {
             required
             onChange={changeDataUser}
             className="loginform_input"
-            value={loginUserData.username}
+            value={loginUserData.bio}
           ></textarea>
 
-          <label class="form-label" for="customFile">
+          <label className="form-label" htmlFor="customFile">
             Default file input example
           </label>
-          <input type="file" class="form-control" id="customFile" />
+          <input
+            value={loginUserData.image}
+            type="file"
+            className="form-control"
+            id="customFile"
+            onChange={changeDataUser}
+          />
           <button
             type="submit"
             className="btn btn-lg btn-primary btn-block"
