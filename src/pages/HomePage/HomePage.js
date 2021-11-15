@@ -14,10 +14,14 @@ const HomePage = () => {
   return (
     <main className="main">
       <section>
-        <h1>My Friends </h1>
-        {users.map((user) => (
-          <CardUser user={user} key={user.id} />
-        ))}
+        <div class="container">
+          <div class="row">
+            <h1>My Friends </h1>
+            {users.map((user) => (
+              <CardUser user={user} key={user.id} />
+            ))}
+          </div>
+        </div>
       </section>
     </main>
   );
