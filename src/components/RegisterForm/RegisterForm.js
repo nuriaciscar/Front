@@ -102,14 +102,15 @@ const RegisterForm = () => {
             value={loginUserData.bio}
           ></textarea>
 
-          <label class="form-label" for="customFile">
+          <label className="form-label" htmlFor="customFile">
             Default file input example
           </label>
           <input
             value={loginUserData.image}
             type="file"
-            class="form-control"
+            className="form-control"
             id="customFile"
+            onChange={changeDataUser}
           />
           <button
             type="submit"
