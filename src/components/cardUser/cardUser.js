@@ -12,6 +12,7 @@ const CardUser = ({ user }) => {
         <div className="card-body pt-0">
           <h3 className="card_info_user_title">{user.username}</h3>
           <p className="card-text">{user.bio}</p>
+          <p className="card-text">{`${user.age} years`}</p>
         </div>
       </div>
     </li>
